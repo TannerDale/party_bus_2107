@@ -48,4 +48,46 @@ describe Bus do
       expect(bus.yell_at_passengers).to eq(['MIKE', 'MEGAN', 'TIM'])
     end
   end
+
+  context 'Passenger Count' do
+    bus = Bus.new('Mikes Awesome Bus', 4)
+    bus.add_passenger('Mike')
+    bus.add_passenger('Megan')
+    bus.add_passenger('Tim')
+
+    it 'has a passenger count' do
+      expect(bus.number_of_passengers).to eq(3))
+    end
+  end
+
+  context 'Under Capacity' do
+    bus = Bus.new('Mikes Awesome Bus', 4)
+    bus.add_passenger('Mike')
+    bus.add_passenger('Megan')
+    bus.add_passenger('Tim')
+
+    it 'has a passenger count under capacity' do
+      expect(bus.number_of_passengers).to eq(3))
+    end
+
+    it 'can check if under capacity' do
+      expect(bus.over_capacity?).to be(false)
+    end
+  end
+
+  context 'Over Capacity' do
+    bus = Bus.new('Mikes Awesome Bus', 4)
+    bus.add_passenger('Mike')
+    bus.add_passenger('Megan')
+    bus.add_passenger('Tim')
+    bus.add_passenger('Eve')
+    bus.add_passenger('Alice')
+
+    it 'has a passenger count over capacity' do
+      expect(bus.number_of_passengers).to eq(5))
+    end
+
+    it 'can check if over capacity' do
+      expect(bus.over_capacity?).to be(true)
+    end
 end
