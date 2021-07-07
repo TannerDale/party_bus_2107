@@ -14,4 +14,12 @@ class Bus
   def yell_at_passengers
     @passengers.map(&:upcase)
   end
+
+  def number_of_passengers
+    @passengers.size
+  end
+
+  def over_capacity?
+    number_of_passengers > @capacity
+  end
 end
