@@ -56,7 +56,7 @@ describe Bus do
     bus.add_passenger('Tim')
 
     it 'has a passenger count' do
-      expect(bus.number_of_passengers).to eq(3))
+      expect(bus.number_of_passengers).to eq(3)
     end
   end
 
@@ -67,7 +67,7 @@ describe Bus do
     bus.add_passenger('Tim')
 
     it 'has a passenger count under capacity' do
-      expect(bus.number_of_passengers).to eq(3))
+      expect(bus.number_of_passengers).to eq(3)
     end
 
     it 'can check if under capacity' do
@@ -84,10 +84,11 @@ describe Bus do
     bus.add_passenger('Alice')
 
     it 'has a passenger count over capacity' do
-      expect(bus.number_of_passengers).to eq(5))
+      expect(bus.number_of_passengers).to eq(5)
     end
 
     it 'can check if over capacity' do
       expect(bus.over_capacity?).to be(true)
     end
+  end
 end
