@@ -22,4 +22,8 @@ class Bus
   def over_capacity?
     number_of_passengers > @capacity
   end
+
+  def kick_out
+    @passengers.shift
+  end
 end
