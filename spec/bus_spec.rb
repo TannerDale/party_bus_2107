@@ -92,7 +92,7 @@ describe Bus do
     end
   end
 
-  context 'Kick Out Passenger' do
+  context 'Kick Out Passengers' do
     bus = Bus.new('Mikes Awesome Bus', 4)
     bus.add_passenger('Mike')
     bus.add_passenger('Megan')
