@@ -60,6 +60,7 @@ describe Bus do
     end
   end
 
+  # Iteration 3
   context 'Under Capacity' do
     bus = Bus.new('Mikes Awesome Bus', 4)
     bus.add_passenger('Mike')
@@ -92,6 +93,7 @@ describe Bus do
     end
   end
 
+  # Iteration 4
   context 'Kick Out Passengers' do
     bus = Bus.new('Mikes Awesome Bus', 4)
     bus.add_passenger('Mike')
